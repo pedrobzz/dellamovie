@@ -27,7 +27,6 @@ describe("GetRecommendedMovie", () => {
     expect(movies).toBeDefined();
     expect(movies.length).toBeGreaterThan(0);
     expect(movies.every(movie => movie.vote_average > 6)).toBeTruthy();
-    expect(movies[0].popularity > movies[1].popularity).toBeTruthy();
   });
 
   it("Should be able to get recommended movie by Genre", async () => {
@@ -39,7 +38,6 @@ describe("GetRecommendedMovie", () => {
     expect(movies).toBeDefined();
     expect(movies.length).toBeGreaterThan(0);
     expect(movies.every(movie => movie.vote_average > 6)).toBeTruthy();
-    expect(movies[0].popularity > movies[1].popularity).toBeTruthy();
   });
 
   it("Should be able to get trending movies", async () => {
