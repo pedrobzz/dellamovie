@@ -1,8 +1,10 @@
 import * as trpc from "@trpc/server";
 import * as trpcNext from "@trpc/server/adapters/next";
-// import { pokemonController } from "../../../application/controller/";
+import { recomendationsController } from "../../../application/controllers";
 
-export const appRouter = trpc.router();
+export const appRouter = trpc
+  .router()
+  .merge("recomendations.", recomendationsController);
 
 export type AppRouter = typeof appRouter;
 
