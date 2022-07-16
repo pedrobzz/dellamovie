@@ -26,3 +26,4 @@ jobs:
 
       - name: Run tests
         run: export TMDB_API_KEY=${{ secrets.TMDB_API_KEY }} && npm run test
+
