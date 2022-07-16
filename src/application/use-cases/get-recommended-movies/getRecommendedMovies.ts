@@ -1,6 +1,6 @@
 import MovieDB from "node-themoviedb";
 
-export class GetRecommendedMovie {
+export class GetRecommendedMovies {
   constructor(private readonly movieDB: MovieDB) {}
 
   async getRecommendedMoviesByActors(

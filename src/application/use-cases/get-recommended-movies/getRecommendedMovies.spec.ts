@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeAll } from "@jest/globals";
 import { config } from "dotenv";
 import { makeTheMovieDB } from "../../factories";
-import { GetRecommendedMovie } from "./getRecommendedMovie";
+import { GetRecommendedMovies } from "./getRecommendedMovies";
 
 const makeSUT = () => {
   const movieDB = makeTheMovieDB();
-  const sut = new GetRecommendedMovie(movieDB);
+  const sut = new GetRecommendedMovies(movieDB);
   return { movieDB, sut };
 };
 
