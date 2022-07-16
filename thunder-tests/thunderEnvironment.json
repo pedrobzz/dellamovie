@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "07be4451-3dce-408f-a4bc-8d10a71b9a83",
+    "name": "dev",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-07-16T09:04:43.152Z",
+    "modified": "2022-07-16T09:04:58.955Z",
+    "data": [
+      {
+        "name": "baseURL",
+        "value": "http://localhost:3000"
+      }
+    ]
+  }
+]

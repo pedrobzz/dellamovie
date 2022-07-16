@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "_id": "d296166f-000d-47ea-99b3-419cda710edf",
+    "colName": "tRPC",
+    "created": "2022-07-16T09:04:36.685Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "6817a866-a945-4d85-9e87-e2a6ec080d77",
+        "name": "categories",
+        "containerId": "",
+        "created": "2022-07-16T09:05:19.014Z",
+        "sortNum": 10000
+      }
+    ]
+  }
+]

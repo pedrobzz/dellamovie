@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "d36f9e72-1b7a-4725-82fc-e713e24d9782",
+    "colId": "d296166f-000d-47ea-99b3-419cda710edf",
+    "containerId": "6817a866-a945-4d85-9e87-e2a6ec080d77",
+    "name": "updateAllCategories",
+    "url": "{{baseURL}}/api/trpc/categories.updateAllCategories",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-07-16T09:05:26.379Z",
+    "modified": "2022-07-16T09:06:49.861Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
