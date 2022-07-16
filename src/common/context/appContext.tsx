@@ -1,18 +1,16 @@
+import { FirebaseApp } from "firebase/app";
 import { createContext } from "react";
+import { firebaseApp } from "../../application/services/firebase";
 
 interface AppContextInterface {
-  name: string;
+  firebaseApp: FirebaseApp;
 }
 
 const AppContext = createContext<AppContextInterface>(null);
 
-const sampleAppContext: AppContextInterface = {
-  name: "TypeScript React Template",
-};
-
 export const AppContextProvider: React.FC = ({ children }) => {
   return (
-    <AppContext.Provider value={sampleAppContext}>
+    <AppContext.Provider value={{ firebaseApp }}>
       {children}
     </AppContext.Provider>
   );
