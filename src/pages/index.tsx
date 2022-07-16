@@ -7,7 +7,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Title>My page</Title>
-      <h3>Context Name: {ctx.name}</h3>
+      <h3 className="text-3xl text-red-500">Context Name: </h3>
     </>
   );
 };
