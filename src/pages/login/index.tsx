@@ -1,9 +1,38 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { useContext } from "react";
+import { useRouter } from "next/router";
+import AuthContext from "../../common/context/authContext";
 
+const provider = new GithubAuthProvider();
 
+const Login = (): JSX.Element => {
+  const { user } = useContext(AuthContext);
+  const router = useRouter();
+  const auth = getAuth();
 
-const Login = () => {
+  const handleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then(result => {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        const credential = GithubAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+      })
+      .catch(error => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = GithubAuthProvider.credentialFromError(error);
+        // ...
+      });
+  };
+  if (user) {
+    router.push("/profile");
+  }
   return (
-  
     <div className="wrapper">
       <section className="auth-sidebar">
         <img src="bg-01-top.png" className="img-bg img-01" />
@@ -24,7 +53,7 @@ const Login = () => {
               Create acoount here
             </button>
           </div>
-          <p style={{fontWeight: "700"}}>© 2022 Company</p>
+          <p style={{ fontWeight: "700" }}>© 2022 Company</p>
         </div>
       </section>
       <section className="content">
@@ -33,7 +62,9 @@ const Login = () => {
             <span className="logo"></span>
             Brand
           </a>
-          <p>Not a member? <a href="#/">Sign up now</a></p>
+          <p>
+            Not a member? <a href="#/">Sign up now</a>
+          </p>
         </header>
         <main>
           <div className="auth-content">
@@ -56,7 +87,11 @@ const Login = () => {
                 <span className="text">Or</span>
                 <span></span>
               </div>
-              <button type="button" className="btn btn-google">
+              <button
+                onClick={handleLogin}
+                type="button"
+                className="btn btn-google"
+              >
                 <span className="google-logo">
                   <svg
                     width="24px"
@@ -82,15 +117,15 @@ const Login = () => {
                     />
                   </svg>
                 </span>
-                <span>Sign in with Google</span>
+                <span>Sign in with GitHub</span>
               </button>
             </form>
-            
           </div>
         </main>
-        </section>
-    <script src="script.js"></script>
-  </div>
-)}
+      </section>
+      <script src="script.js"></script>
+    </div>
+  );
+};
 
 export default Login;
