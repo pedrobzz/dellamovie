@@ -5,7 +5,7 @@ export interface CategoriesRepositoryModel {
   getCategories(): Promise<Category[]>;
   updateCategory(
     id: string,
-    category: Omit<Category, "createdAt" | "updatedAt">,
+    category: Omit<Category, "createdAt" | "updatedAt" | "id">,
   ): Promise<Category>;
   createCategory(
     category: Omit<Category, "createdAt" | "updatedAt">,

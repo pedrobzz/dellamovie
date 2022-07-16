@@ -16,7 +16,7 @@ export class ManageCategories {
 
   async updateCategory(
     id: string,
-    category: Omit<Category, "createdAt" | "updatedAt">,
+    category: Omit<Category, "createdAt" | "updatedAt" | "id">,
   ): Promise<Category> {
     return this.categoriesRepository.updateCategory(id, category);
   }
@@ -31,5 +31,13 @@ export class ManageCategories {
     Omit<Category, "createdAt" | "updatedAt">[]
   > {
     return this.categoriesRepository.updateAllCategories();
+  }
+
+  async getMultipleCategories(ids: string[]): Promise<Category[]> {
+    return Promise.all(
+      new Array(ids.length).fill(0).map(async (_, index) => {
+        return await this.getCategory(ids[index]);
+      }),
+    );
   }
 }

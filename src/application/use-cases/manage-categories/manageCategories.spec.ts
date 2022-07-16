@@ -131,4 +131,40 @@ describe("ManageCategories", () => {
     expect(categories).toBeDefined();
     expect(categories.length).toBe(19);
   });
+
+  it("Should be able to getCategory by id", async () => {
+    const { sut } = makeSUT();
+    const category = await sut.getCategory("10402");
+    expect(category).toBeDefined();
+    expect(category.id).toBe("10402");
+  });
+
+  it("Should be able to updateCategory", async () => {
+    const { sut } = makeSUT();
+    const category = await sut.updateCategory("10402", {
+      name: "Música",
+    });
+    expect(category).toBeDefined();
+    expect(category.name).toBe("Música");
+  });
+
+  it("Should be able to createCategory", async () => {
+    const { sut } = makeSUT();
+    const category = await sut.createCategory({
+      id: "837263",
+      name: "Categoria Teste",
+    });
+    expect(category).toBeDefined();
+    expect(category.id).toBe("837263");
+    expect(category.name).toBe("Categoria Teste");
+  });
+
+  it("Should be able to get multiple categories", async () => {
+    const { sut } = makeSUT();
+    const ids = ["10402", "10749"];
+    const categories = await sut.getMultipleCategories(ids);
+    expect(categories).toBeDefined();
+    expect(categories.length).toBe(2);
+    expect(categories.every(c => ids.includes(c.id))).toBe(true);
+  });
 });
