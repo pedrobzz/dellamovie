@@ -1,0 +1,25 @@
+name: Staging Pipeline
+
+on: 
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    name: Build and Test project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+    
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+          cache: 'npm'
+
+      - name: Run tests
+        run: npm run test
