@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "ada71d27-ea5d-4223-b7c4-bfcec4c26358",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/genre/movie/list?api_key=9dce3ecc85cc4e26e1d3c89cf63a11e0&language=en-US",
+    "url": "https://api.themoviedb.org/3/genre/movie/list?api_key=9dce3ecc85cc4e26e1d3c89cf63a11e0&language=en-US",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-16T03:02:57.272Z",
+    "modified": "2022-07-16T03:02:57.573Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api_key",
+        "value": "9dce3ecc85cc4e26e1d3c89cf63a11e0",
+        "isPath": false
+      },
+      {
+        "name": "language",
+        "value": "en-US",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "f512bb4d-148c-471e-abe4-4da76bb561d4",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/genre/movie/list?api_key=9dce3ecc85cc4e26e1d3c89cf63a11e0&language=pt-BR",
+    "url": "https://api.themoviedb.org/3/genre/movie/list?api_key=9dce3ecc85cc4e26e1d3c89cf63a11e0&language=pt-BR",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-16T03:03:06.455Z",
+    "modified": "2022-07-16T03:03:06.763Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api_key",
+        "value": "9dce3ecc85cc4e26e1d3c89cf63a11e0",
+        "isPath": false
+      },
+      {
+        "name": "language",
+        "value": "pt-BR",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]

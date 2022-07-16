@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "rangav.vscode-thunder-client",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
