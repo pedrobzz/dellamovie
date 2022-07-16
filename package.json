@@ -11,6 +11,7 @@
     "@trpc/next": "^9.26.0",
     "@trpc/react": "^9.26.0",
     "@trpc/server": "^9.26.0",
+    "dotenv": "^16.0.1",
     "firebase": "^9.9.0",
     "next": "latest",
     "node-themoviedb": "^0.2.8",
