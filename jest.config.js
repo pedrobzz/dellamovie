@@ -1,6 +1,6 @@
 module.exports = {
   injectGlobals: true,
   transform: {
-    "^.+\\.spec.ts": ["@swc/jest"],
+    "^.+\\.(t|j)sx?$": ["@swc/jest"],
   },
 };
