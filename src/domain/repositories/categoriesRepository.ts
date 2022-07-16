@@ -1,6 +1,6 @@
 import { Category } from "@prisma/client";
 
-export interface CategoryRepositoryModel {
+export interface CategoriesRepositoryModel {
   getCategory(id: string): Promise<Category>;
   getCategories(): Promise<Category[]>;
   updateCategory(
@@ -10,5 +10,5 @@ export interface CategoryRepositoryModel {
   createCategory(
     category: Omit<Category, "createdAt" | "updatedAt">,
   ): Promise<Category>;
-  updateAllCategories(): Promise<Category[]>;
+  updateAllCategories(): Promise<Omit<Category, "createdAt" | "updatedAt">[]>;
 }
