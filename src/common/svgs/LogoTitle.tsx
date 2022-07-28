@@ -12,7 +12,7 @@ export const LogoTitleIcon = ({ onClick }: LogoTitleIconProps): JSX.Element => (
   <svg
     width="101px"
     height="29px"
-    viewBox="0 0 101 20"
+    viewBox="0 0 101 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     onClick={onClick}

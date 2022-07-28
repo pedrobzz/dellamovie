@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import HomeIcon from "../../svgs/homeIcon";
+import HomeIcon from "../../svgs/HomeIcon";
 import SearchIcon from "../../svgs/SearchIcon";
 import ExploreIcon from "../../svgs/ExploreIcon";
 import ChatIcon from "../../svgs/ChatIcon";
