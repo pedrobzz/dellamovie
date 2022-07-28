@@ -18,13 +18,12 @@ const Navigation: React.FC = (): JSX.Element => {
       </Link>
       <Link href="/explore">
         <a>
-          {" "}
-          <SearchIcon />{" "}
+          <SearchIcon />
         </a>
       </Link>
       <Link href="/match">
         <a>
-          <StarIcon />{" "}
+          <StarIcon />
         </a>
       </Link>
       <Link href="/chat">
