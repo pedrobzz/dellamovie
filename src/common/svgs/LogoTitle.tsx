@@ -4,18 +4,13 @@ import React from "react";
 
 /* import { Container } from "./styles"; */
 
-interface LogoTitleIconProps {
-  onClick: () => void;
-}
-
-export const LogoTitleIcon = ({ onClick }: LogoTitleIconProps): JSX.Element => (
+export const LogoTitleIcon = (): JSX.Element => (
   <svg
     width="101px"
     height="29px"
     viewBox="0 0 101 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    onClick={onClick}
   >
     <path
       d="M9.51891 18.2753C9.50157 18.2753 9.48422 18.2753 9.46687 18.2573C8.88574 17.4475 8.73829 16.0619 8.69493 15.5311C8.69493 15.4321 8.58217 15.3691 8.49544 15.4231C6.67399 16.4758 5 18.9771 5 21.3883C5 25.5271 7.77553 29 12.546 29C17.0128 29 20.092 25.4191 20.092 21.3883C20.092 16.1069 16.4491 12.598 13.2138 11.0145C13.195 11.0037 13.1735 10.9988 13.1521 11.0003C13.1306 11.0017 13.1099 11.0096 13.0926 11.0228C13.0753 11.036 13.062 11.0542 13.0543 11.075C13.0465 11.0959 13.0447 11.1186 13.049 11.1404C13.4654 13.9836 12.8929 17.0786 9.51891 18.2753V18.2753Z"
