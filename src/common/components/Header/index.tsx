@@ -6,8 +6,8 @@ import LogoTitleIcon from "../../svgs/LogoTitle";
 
 const Header: React.FC = (): JSX.Element => {
   return (
-    <div className="flex justify-center ">
-      <LogoTitleIcon onClick={console.log} />
+    <div className="flex justify-center shrink-0 py-2">
+      <LogoTitleIcon width="25%" />
     </div>
   );
 };

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Navigation: React.FC = (): JSX.Element => {
   return (
-    <div className="flex items-center  justify-between p-5 h-2">
+    <div className="flex items-center  justify-between p-5 h-2 shrink-0">
       <Link href="/">
         <a>
           <HomeIcon />

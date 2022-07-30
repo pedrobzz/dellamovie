@@ -9,7 +9,7 @@ const Home = (): JSX.Element => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="h-[90vh]  bg-[#acabab] relative overflow-hidden flex-col">
+    <div className="h-full overflow-hidden">
       {data && <Cards data={data} onClick={console.log} />}
     </div>
   );

@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import MovieDB from "node-themoviedb";
 import React from "react";
-/* import { Container } from "./styles"; */
 
 interface CardsProps {
   data: MovieDB.Responses.Trending.GetTrending;

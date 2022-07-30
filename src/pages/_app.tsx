@@ -4,11 +4,10 @@ import "../common/styles/globals.css";
 
 import { AppContextProvider } from "../common/context/appContext";
 import { AuthContextProvider } from "../common/context/authContext";
-import Header from "../common/components/Header";
-import Navigation from "../common/components/Navigation";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "./api/trpc/[trpc]";
 import React from "react";
+import BaseLayout from "../common/layouts/baseLayout";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   // https://stackoverflow.com/questions/71809903/next-js-component-cannot-be-used-as-a-jsx-component
@@ -17,9 +16,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     <>
       <AppContextProvider>
         <AuthContextProvider>
-          <Header />
-          <TypedComponent {...pageProps} />
-          <Navigation />
+          <BaseLayout>
+            <TypedComponent {...pageProps} />
+          </BaseLayout>
         </AuthContextProvider>
       </AppContextProvider>
     </>
