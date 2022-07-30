@@ -1,20 +1,17 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import React from "react";
+import { Icon } from "../../application/domain/components";
 
-/* import { Container } from "./styles"; */
-
-export const StarIcon = (): JSX.Element => (
+export const StarIcon: Icon = ({ width, active }) => (
   <svg
-    width="26.27"
-    height="26.67"
-    viewBox="0 0 20 20"
+    width={width || "22"}
+    height="auto"
+    viewBox="0 0 22 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M9.999 0C9.999 5.001 15 10 20 10C14.999 10 10 15.382 10 20C10 15.382 4.973 10 0 10C4.974 10 9.999 5.001 9.999 0Z"
-      fill="#AAAAAA"
+      d="M10.9989 0C10.9989 5.5011 16.5 11 22 11C16.4989 11 11 16.9202 11 22C11 16.9202 5.4703 11 0 11C5.4714 11 10.9989 5.5011 10.9989 0Z"
+      fill={active ? "#ECBD3B" : "#AAAAAA"}
     />
   </svg>
 );
