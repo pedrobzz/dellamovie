@@ -1,12 +1,17 @@
 import React from "react";
-import { Title } from "../common/components/Title";
+import Cards from "../common/components/cards";
+import { useTRPC } from "../common/hooks/useTRPC";
 
 const Home = (): JSX.Element => {
+  const trpc = useTRPC();
+  const { data, isLoading } = trpc.useQuery(["recomendations.getTrending"]);
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
-    <>
-      <Title>My page</Title>
-      <h3 className="text-3xl text-red-500">Context Name: </h3>
-    </>
+    <div className="h-full overflow-hidden">
+      {data && <Cards data={data} onClick={console.log} />}
+    </div>
   );
 };
 
