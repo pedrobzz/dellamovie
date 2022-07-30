@@ -12,6 +12,7 @@
     "allowJs": true,
     "noEmit": true,
     "strict": false,
+    "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "noUnusedLocals": false,
@@ -23,15 +24,11 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
   },
   "exclude": [
     "node_modules"
   ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "src/common/context/appContext.tss"  ],
+  "include": ["next-env.d.ts", "src/**.tsx", "src/**.ts"],
   "types": []
 }

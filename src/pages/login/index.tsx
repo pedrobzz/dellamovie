@@ -3,6 +3,7 @@ import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import { useContext } from "react";
 import { useRouter } from "next/router";
 import AuthContext from "../../common/context/authContext";
+import React from "react";
 
 const provider = new GithubAuthProvider();
 
@@ -16,7 +17,7 @@ const Login = (): JSX.Element => {
       .then(result => {
         // This gives you a GitHub Access Token. You can use it to access the GitHub API.
         const credential = GithubAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        const token = credential?.accessToken;
       })
       .catch(error => {
         // Handle Errors here.
@@ -35,8 +36,6 @@ const Login = (): JSX.Element => {
   return (
     <div className="wrapper">
       <section className="auth-sidebar">
-        <img src="bg-01-top.png" className="img-bg img-01" />
-        <img src="bg-01-bottom.png" className="img-bg img-02" />
         <div className="auth-sidebar-content">
           <header>
             <a href="#/" className="brand-logo" title="company">
@@ -123,7 +122,6 @@ const Login = (): JSX.Element => {
           </div>
         </main>
       </section>
-      <script src="script.js"></script>
     </div>
   );
 };

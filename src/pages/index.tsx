@@ -1,9 +1,7 @@
-import { useContext } from "react";
+import React from "react";
 import { Title } from "../common/components/Title";
-import AppContext from "../common/context/appContext";
 
 const Home = (): JSX.Element => {
-  const ctx = useContext(AppContext);
   return (
     <>
       <Title>My page</Title>
