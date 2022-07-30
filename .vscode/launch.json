@@ -9,7 +9,6 @@
       "name": "yarn dev",
       "request": "launch",
       "type": "node-terminal"
-
     },
   ]
 }

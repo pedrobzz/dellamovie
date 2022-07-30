@@ -4,6 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "pscale:dev": "pscale connect dellamovie dellamovie-dev --port 3309",
     "test": "jest"
   },
@@ -25,6 +26,7 @@
     "zod": "^3.17.3"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.2.3",
     "@swc/core": "^1.2.215",
     "@swc/jest": "^0.2.21",
     "@types/node": "15.0.0",

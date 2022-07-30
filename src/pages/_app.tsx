@@ -8,14 +8,17 @@ import Header from "../common/components/Header";
 import Navigation from "../common/components/Navigation";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "./api/trpc/[trpc]";
+import React from "react";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+  // https://stackoverflow.com/questions/71809903/next-js-component-cannot-be-used-as-a-jsx-component
+  const TypedComponent = Component as unknown as React.FC;
   return (
     <>
       <AppContextProvider>
         <AuthContextProvider>
           <Header />
-          <Component {...pageProps} />
+          <TypedComponent {...pageProps} />
           <Navigation />
         </AuthContextProvider>
       </AppContextProvider>
